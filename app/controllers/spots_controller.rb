@@ -5,6 +5,7 @@ class SpotsController < ApplicationController
 
   def show
     @spot = Spot.find(params[:id])
+  end
 
   def new
     @spot = Spot.new
@@ -32,5 +33,5 @@ class SpotsController < ApplicationController
   def spot_params
     params.require(:spot).permit(:description, :price, :address, :city)
   end
-
 end
+
