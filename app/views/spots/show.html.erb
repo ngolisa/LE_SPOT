@@ -1,6 +1,14 @@
 <h1> </h1>
 
-<%= @spot.description %>
-<% if current_user == @spot.user %>
-  <%= link_to "Edit", edit_spot_path(@spot) %>
-<% end %>
+<div class="container">
+  <div class="little_navbar">
+    <h1> <%= @spot.description %> </h1>
+    <p> <%= @spot.address %> </p>
+    <p> <%= @spot.city %> </p>
+
+    <%= @spot.description %>
+    <% if current_user == @spot.user %>
+      <%= link_to "Edit", edit_spot_path(@spot) %>
+    <% end %>
+  </div>
+</div>
