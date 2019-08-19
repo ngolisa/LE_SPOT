@@ -1,3 +1,6 @@
 <h1> </h1>
 
 <%= @spot.description %>
+<% if current_user == @spot.user %>
+  <%= link_to "Edit", edit_spot_path(@spot) %>
+<% end %>
