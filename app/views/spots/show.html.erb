@@ -14,6 +14,9 @@
 
     <% if current_user == @spot.user %>
       <button type="button" class="btn btn-info"> <%= link_to "Edit", edit_spot_path(@spot) %> </button>
+      <button type="button" class="btn btn-info"> <%= link_to "Delete", spot_path(@spot),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %> </button>
     <% end %>
 
 </div>
