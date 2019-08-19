@@ -3,14 +3,14 @@
  <ul>
 
 <% @spots.each do |spot| %>
-<li>
+<li class="cards">
   <%= spot.description%>
+  <%= link_to "See more", spot_path(spot)%>
   <%= spot.price %>
 </li>
 
 <% end %>
 
  </ul>
-
 
 </div>
