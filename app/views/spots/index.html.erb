@@ -1,16 +1,10 @@
 <div class="container">
  <h1> All spots</h1>
- <ul>
-
-<% @spots.each do |spot| %>
-<li class="cards">
-  <%= spot.description%>
-  <%= link_to "See more", spot_path(spot)%>
-  <%= spot.price %>
-</li>
-
-<% end %>
-
- </ul>
-
-</div>
+ <div class="cards">
+    <% @spots.each do |spot| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= spot.description %>
+          <%= spot.price %>
+          <%= link_to "See more", spot_path(spot)%>
+      </div>
+  <% end %>
