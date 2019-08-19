@@ -5,10 +5,15 @@
     <h1> <%= @spot.description %> </h1>
     <p> <%= @spot.address %> </p>
     <p> <%= @spot.city %> </p>
-
-    <%= @spot.description %>
-    <% if current_user == @spot.user %>
-      <%= link_to "Edit", edit_spot_path(@spot) %>
-    <% end %>
   </div>
+
+  <button type="button" class="btn btn-primary">Book a spot</button>
+
+
+  <input type="date">
+
+    <% if current_user == @spot.user %>
+      <button type="button" class="btn btn-info"> <%= link_to "Edit", edit_spot_path(@spot) %> </button>
+    <% end %>
+
 </div>
