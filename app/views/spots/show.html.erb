@@ -7,10 +7,14 @@
     <p> <%= @spot.city %> </p>
   </div>
 
-  <button type="button" class="btn btn-primary">Book a spot</button>
+ <!--  <button type="button" class="btn btn-primary"><%#= link_to "Book this spot", new_spot_reservation_path(@spot) %></button> -->
 
 
-  <input type="date">
+  <%= simple_form_for @reservation do |f| %>
+    <%= f.input :date %>
+    <%= f.input :spot_id, as: :hidden, input_html: { value: @spot.id } %>
+    <%= f.submit %>
+  <% end %>
 
     <% if current_user == @spot.user %>
       <button type="button" class="btn btn-info"> <%= link_to "Edit", edit_spot_path(@spot) %> </button>
