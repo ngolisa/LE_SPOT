@@ -7,7 +7,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
     @reservation.save
-    redirect_to spot_path(@reservation.spot)
+    redirect_to reservation_path(@reservation)
   end
 
   def show
