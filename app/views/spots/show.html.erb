@@ -10,7 +10,7 @@
  <!--  <button type="button" class="btn btn-primary"><%#= link_to "Book this spot", new_spot_reservation_path(@spot) %></button> -->
 
   <%= simple_form_for @reservation do |f| %>
-    <%= f.input :date %>
+    <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
     <%= f.input :spot_id, as: :hidden, input_html: { value: @spot.id } %>
     <%= f.submit %>
   <% end %>
