@@ -1,34 +1,85 @@
-<h1>Home</h1>
+ <div class="content">
 
-<%= link_to "All spots",  spots_path %>
+  <div class="mainBanner">
+    <h2 class="h-title1 mainBanner-title"> <strong>A new way to play</strong></h2>
 
-<form>
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="City">
-    </div>
-    <div class="form-row">
-    <div class="col">
-       <input type="date">
-    </div>
-    <button type="button" class="btn btn-secondary btn-lg">🔎 Rechercher</button>
-  </div>
- </div>
-</form>
 
-<div class="mainBanner">
-<h2 class="h-title1 mainBanner-title">A new way of play/h2>
-</div>
 
-<div class="introSection">
-  <h2 class="h-title2 introSection-title">When fantastic meets history</h2>
-    <p class="introSection-text"> Forget everything you know about Tennis </p>
-        <p class="introSection-text">L’aventure Le Collectionist est née de l’envie de voyager autrement; loin des séjours figés, des établissements standardisés et des parcours balisés. Pour nous, voyager, c’est prendre le rythme d’une destination, se laisser inspirer par l’esprit d’un lieu et sortir des sentiers battus. C’est vivre pleinement chaque moment, entouré de ceux qu’on aime.</p>
-
-        <p class="introSection-text">Nous imaginons votre voyage avec vous, en piochant dans notre collection de lieux, de maisons privées, d’expériences et de rencontres. Nous créons un autre voyage, sur-mesure, libre et authentique dans des maisons privées.</p>
+    <form>
+      <div class="form-row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="City">
         </div>
-</div>
+        <div class="form-row">
+        <div class="col">
+           <input type="date">
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg">🔎 Rechercher</button>
 
+      </div>
+     </div>
+    </form>
+    <div class = "content-btn-explorer">
+      <%= link_to "Explore all spots 🌎",  spots_path, :class => "btn btn-light btn-lg btn-explorer" %>
+    </div>
+  </div>
+
+  <div class="introSection">
+    <h2 class="h-title2 introSection-title"> <strong>When fantastic meets history</strong> </h2>
+    <br>
+      <p class="introSection-text"> Forget everything you know about Tennis </p>
+          <p class="introSection-text">L’aventure Le Collectionist est née de l’envie de voyager autrement; loin des séjours figés, des établissements standardisés et des parcours balisés. Pour nous, voyager, c’est prendre le rythme d’une destination, se laisser inspirer par l’esprit d’un lieu et sortir des sentiers battus. C’est vivre pleinement chaque moment, entouré de ceux qu’on aime.</p>
+
+          <p class="introSection-text">Nous imaginons votre voyage avec vous, en piochant dans notre collection de lieux, de maisons privées, d’expériences et de rencontres. Nous créons un autre voyage, sur-mesure, libre et authentique dans des maisons privées.</p>
+          </div>
+  </div>
+
+  <div class="container-cards">
+
+    <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-home">
+        <h2>Fast</h2>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-home">
+        <h2>Simple</h2>
+
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card-home">
+        <h2>Unique</h2>
+
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+       <div class="card-home">
+        <h2>Beautiful</h2>
+        <p
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+    <div id="footer
+    ">
+
+      <ul>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+
+</div>
 
 
 
