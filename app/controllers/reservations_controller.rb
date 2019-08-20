@@ -4,6 +4,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     @reservation.save
     redirect_to spot_path(@reservation.spot)
+    raise
   end
 
   private
