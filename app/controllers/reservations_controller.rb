@@ -14,6 +14,12 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
+  def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to reservations_path
+  end
+
   private
 
   def reservation_params

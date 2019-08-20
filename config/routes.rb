@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :spots do
   end
 
-  resources :reservations, only: [:create, :index, :show]
+  resources :reservations, only: [:create, :index, :show, :destroy]
 end
