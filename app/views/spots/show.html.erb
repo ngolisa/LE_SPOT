@@ -9,8 +9,7 @@
 
   <button type="button" class="btn btn-primary">Book a spot</button>
 
-
-  <input type="date">
+  <%=  render "form-date.html.erb" %>
 
     <% if current_user == @spot.user %>
       <button type="button" class="btn btn-info"> <%= link_to "Edit", edit_spot_path(@spot) %> </button>
