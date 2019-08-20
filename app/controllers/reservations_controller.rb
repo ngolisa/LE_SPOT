@@ -1,4 +1,8 @@
 class ReservationsController < ApplicationController
+  def index
+    @reservations = Reservation.where(current_user == :user)
+  end
+
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user

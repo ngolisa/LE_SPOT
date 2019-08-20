@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>My reservations</h1>
+  <ul>
+    <% @reservations.each do |reservation| %>
+    <li>
+      <%=  reservation.spot.description %>
+      <%= reservation.date %>
+      <p>Owner : <%= cl_image_tag reservation.spot.user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
+    </li>
+    <% end %>
+  </ul>
+
+
+</div>
