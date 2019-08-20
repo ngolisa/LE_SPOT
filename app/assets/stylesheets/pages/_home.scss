@@ -1,1 +1,39 @@
-// Specific CSS for your home-page
+// Specific CSS for your home-page //
+
+.mainBanner-title {
+    color: #fff;
+    margin: auto auto 22px;
+    max-width: 85%;
+}
+
+.mainBanner {
+    background-image: url("59537f4e49a12.jpeg");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 58px;
+    min-height: 400px;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.h-title1 {
+    font-family: "Caslon Becker Graphique";
+    font-size: 30px;
+    font-weight: 300;
+}
+
+h2, .h2 {
+    font-size: 32px;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 100;
+    line-height: 1.1;
+    color: inherit;
+}
