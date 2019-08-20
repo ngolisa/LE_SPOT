@@ -1,0 +1,53 @@
+.body {
+  background: white;
+}
+
+
+.little_navbar {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.btn-ghost {
+   color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#72c42b, #72c42b);
+  transition: background 0.3s ease;
+  position: absolute;
+  top: 85px;
+  right: 22px;
+  padding-left: 33px;
+  padding-right: 33px;
+
+  a {
+    color: white
+  }
+}
+
+.btn-del {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#e03c3c, #e03c3c);
+  transition: background 0.3s ease;
+  position: absolute;
+  top: 137px;
+
+ a {
+  color: white;
+ }
+}
+
+.card-trip {
+  height: 400px;
+
+  img {
+  width:100%;
+  height:100%;
+  display:block;
+  }
+}
