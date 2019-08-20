@@ -1,14 +1,24 @@
 <div class="container">
   <h1>My reservations</h1>
-  <ul>
+
     <% @reservations.each do |reservation| %>
-    <li>
-      <%=  reservation.spot.description %>
-      <%= reservation.date %>
-      <p>Owner : <%= cl_image_tag reservation.spot.user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
-    </li>
+
+      <%= link_to reservation_path(reservation)  do%>
+        <div class="card-product">
+
+          <%= cl_image_tag reservation.spot.photo, class: "card-product-infos"%>
+            <div class="card-product-infos">
+              <h2><%=  reservation.date %></h2>
+              <p>Owner : <%= cl_image_tag reservation.spot.user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
+            </div>
+        </div>
+
+      <% end %>
+
+
+
     <% end %>
-  </ul>
+
 
 
 </div>

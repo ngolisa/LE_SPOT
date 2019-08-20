@@ -10,6 +10,10 @@ class ReservationsController < ApplicationController
     redirect_to spot_path(@reservation.spot)
   end
 
+  def show
+    @reservation = Reservation.find(params[:id])
+  end
+
   private
 
   def reservation_params
