@@ -2,12 +2,8 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     @reservation.user = current_user
-    raise
-    if @reservation.save
-      redirect_to spot_path(@spot)
-    else
-      render 'new'
-    end
+    @reservation.save
+    redirect_to spot_path(@reservation.spot)
   end
 
   private
