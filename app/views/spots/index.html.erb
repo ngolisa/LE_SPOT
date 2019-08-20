@@ -1,10 +1,33 @@
 <div class="container">
- <h1> All spots</h1>
+ <h1> All spots(<%= @spots.length %>)</h1>
  <div class="cards">
     <% @spots.each do |spot| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <%= spot.description %>
-          <%= spot.price %>
-          <%= link_to "See more", spot_path(spot)%>
+      <%= link_to spot_path(spot) do %>
+
+
+
+
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= spot.description %></h2>
+            <p><%= spot.city %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= spot.price %></h2>
+         <!--  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+          <%= cl_image_tag current_user.avatar, class: "card-trip-user avatar-bordered"%>
+        </div>
       </div>
+
+
+
+
+<!--
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+            <%= spot.description %>
+            <%= spot.price %>
+        </div> -->
+      <% end %>
   <% end %>
+
