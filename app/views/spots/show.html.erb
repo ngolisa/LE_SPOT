@@ -4,20 +4,25 @@
   <div class="little_navbar">
      <div>
      <h1> <%= @spot.description %> </h1>
-     <p> <%= @spot.address %> </p>
-     <p> <%= @spot.city %> </p>
+     <p> <%= @spot.address %> - <%= @spot.city %> </p>
+
     </div>
     <div>
       <% if current_user == @spot.user %>
         <%= link_to "Edit", edit_spot_path(@spot), class: "btn btn-ghost" %>
-        <button type="button" class="btn btn-info"> <%= link_to "Delete", spot_path(@spot),
+
+        <button type="button" class="btn-del"> <%= link_to "Delete", spot_path(@spot),
         method: :delete,
         data: { confirm: "Are you sure?" } %> </button>
       <% end %>
-
-
     </div>
   </div>
+
+    <div class="card-trip">
+      <span class="img"> <%= cl_image_tag(@spot.photo, class: "d-block w-100") %> </span>
+    </div>
+
+
 
  <!--  <button type="button" class="btn btn-primary"><%#= link_to "Book this spot", new_spot_reservation_path(@spot) %></button> -->
   <div>
