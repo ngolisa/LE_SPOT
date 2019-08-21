@@ -10,7 +10,7 @@
             <div class="card-product-infos">
             <h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4>
 
-            <h2><%=  reservation.date %></h2>
+            <h2><%=  reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
 
             </div>
         </div>
