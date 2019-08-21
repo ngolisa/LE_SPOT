@@ -1,0 +1,23 @@
+<div class="container content-for-nav-and-foot">
+  <h1>My spots (<%= @spots.length %>)</h1>
+
+    <% @spots.each do |spot| %>
+      <%= link_to spot_path(spot) do %>
+        <div class="card-product">
+
+          <%= cl_image_tag spot.photo, class: "card-product-infos"%>
+            <div class="card-product-infos">
+              <h2><%=  spot.description %></h2>
+
+            </div>
+        </div>
+
+
+      <% end %>
+
+
+    <% end %>
+
+
+
+</div>

@@ -1,9 +1,7 @@
 // Specific CSS for your home-page //
-
-.mainBanner-title {
-    color: #fff;
-    margin: auto auto 22px;
-    max-width: 100vh;
+.content-for-nav-and-foot{
+  margin-top: 50px;
+  min-height: calc(100vh - 140px);
 }
 
 
@@ -17,7 +15,7 @@ https://bright-media.brightmls.com/bright/images/0000/3012/9367/9697/30129367969
     padding: 120px 0;
     text-align: center;
     vertical-align: center;
-    height: 92vh;
+    height: calc(100vh - 10px);
 }
 
 .mainBanner h2{
