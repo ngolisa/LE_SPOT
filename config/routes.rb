@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :spots do
   end
 
+  get '/myspots', to: 'spots#my'
 
   resources :reservations, only: [:create, :index, :show, :destroy]
 end

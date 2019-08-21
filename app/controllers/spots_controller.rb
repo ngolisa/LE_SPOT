@@ -41,6 +41,10 @@ class SpotsController < ApplicationController
     redirect_to spots_path
   end
 
+  def my
+    @spots = Spot.where(current_user == :user)
+  end
+
   private
 
   def spot_params
