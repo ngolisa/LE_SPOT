@@ -51,16 +51,29 @@ url = "https://images.unsplash.com/photo-1564525063120-1f209f91d3ca?ixlib=rb-1.2
 spot5.remote_photo_url = url
 spot5.save
 
+spot6 = Spot.new(city:'Shanghai', user: lisa, address: "12 Chenguang St", description: "Shanghai Beautiful Tennis Session", price: 180)
+url = "https://images.unsplash.com/photo-1465322625814-2c183694898c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2691&q=80"
+spot6.remote_photo_url = url
+spot6.save
+
+spot7 = Spot.new(city:'Singapore', user: lisa, address: "16a, Bali Lane 189852, Singapore", description: "Singapore amazing tennis night session", price: 280)
+url = "https://images.unsplash.com/photo-1499939256288-c8c99d68354c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+spot7.remote_photo_url = url
+spot7.save
+
+
 reservation1 = Reservation.new(user: lisa, spot: spot1, date: "Thu, 22 Aug 2019 12:00:00 UTC +00:00")
 reservation1.save
 
 
-reservation2 = Reservation.new(user: lisa, spot: spot3, date: "Thu, 29 Aug 2019 12:00:00 UTC +00:00")
+reservation2 = Reservation.new(user: lisa, spot: spot2, date: "Thu, 29 Aug 2019 12:00:00 UTC +00:00")
 reservation2.save
 
 reservation3 = Reservation.new(user: lisa, spot: spot3, date: "Fr, 30 Aug 2019 12:00:00 UTC +00:00")
 reservation3.save
 
-reservation4 = Reservation.new(user: lisa, spot: spot2, date: "Sat, 31 Aug 2019 12:00:00 UTC +00:00")
+reservation4 = Reservation.new(user: lisa, spot: spot4, date: "Sat, 31 Aug 2019 12:00:00 UTC +00:00")
 reservation4.save
 
+reservation5 = Reservation.new(user: lisa, spot: spot5, date: "Sat, 31 Aug 2019 12:00:00 UTC +00:00")
+reservation5.save
