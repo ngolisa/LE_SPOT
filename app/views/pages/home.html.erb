@@ -3,23 +3,27 @@
   <div class="mainBanner">
     <h2 class="h-title1 mainBanner-title"> <strong>THE SPOT</strong></h2>
     <h3>A new way to play</h3>
+w
 
-
-
+<!-- <div class="container-form"> -->
     <form>
-      <div class="form-row">
-        <div class="col">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-xs-12 col-md-2">
           <input type="text" class="form-control" placeholder="City">
         </div>
-        <div class="form-row">
-        <div class="col">
-           <input type="date">
+        <div class="col-xs-12 col-md-2">
+          <input type="date" class='datepicker form-control' placeholder='<%= Date.today.strftime('%m/%d/%Y') %>'>
         </div>
-        <button type="button" class="btn btn-secondary btn-lg">🔎 Rechercher</button>
+        <!-- <div class="col-xs-12 col-md-2 look-button"> -->
+          <button type="button" class="btn btn-warning col-xs-12 col-md-2 search-btn">🔎 Rechercher</button>
+        <!-- </div> -->
+        <div class="col-md-3"></div>
 
       </div>
      </div>
     </form>
+    <!-- </div> -->
 
 
     <!-- Search form -->
