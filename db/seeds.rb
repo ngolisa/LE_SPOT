@@ -25,8 +25,9 @@ lisa = User.new(email:"lisango.e@gmail.com", username: "lisango", password:"azer
 lisa.remote_avatar_url = url
 lisa.save
 
-spot1 = Spot.new(city:'Paris', user: arthur, address: "85 boulevard Flandrin", description: "Stunning Tennis Court In the Heart of Paris", price: 150)
-url = "https://www.djuringa-juniors.fr/media/organisateurs/viva/tennis/2019/colonie-de-vacances-tennis-90.jpg"
+
+spot1 = Spot.new(city:'Paris', user: arthur, address: "85 boulevard Flandrin", description: "Magnifique terrain de tennis en plein coeur de Paris", price: 200)
+url = "https://images.unsplash.com/photo-1489824740691-7a25f94fc85a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"
 spot1.remote_photo_url = url
 spot1.save
 
