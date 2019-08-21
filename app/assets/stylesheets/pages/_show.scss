@@ -5,8 +5,25 @@
 
 .little_navbar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
+}
+
+.show-buttons {
+  display: flex;
+  flex-direction: column;
+  * {
+    margin: 10px;
+    &:hover {
+      color: white;
+      opacity: 0.6;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  color: white;
 }
 
 .btn-ghost {
@@ -16,9 +33,9 @@
   font-weight: bold;
   background: linear-gradient(#72c42b, #72c42b);
   transition: background 0.3s ease;
-  position: absolute;
-  top: 85px;
-  right: 22px;
+  // position: absolute;
+  // top: 85px;
+  // right: 22px;
   padding-left: 33px;
   padding-right: 33px;
 
@@ -34,8 +51,8 @@
   font-weight: bold;
   background: linear-gradient(#e03c3c, #e03c3c);
   transition: background 0.3s ease;
-  position: absolute;
-  top: 137px;
+  // position: absolute;
+  // top: 137px;
 
  a {
   color: white;
