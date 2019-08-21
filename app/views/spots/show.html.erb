@@ -7,13 +7,13 @@
      <p> <%= @spot.address %> - <%= @spot.city %> </p>
 
     </div>
-    <div>
+    <div class="show-buttons">
       <% if current_user == @spot.user %>
         <%= link_to "Edit", edit_spot_path(@spot), class: "btn btn-ghost" %>
 
-        <button type="button" class="btn-del"> <%= link_to "Delete", spot_path(@spot),
+        <%= link_to "Delete", spot_path(@spot),
         method: :delete,
-        data: { confirm: "Are you sure?" } %> </button>
+        data: { confirm: "Are you sure?" }, class:"btn-del" %>
 
       <% end %>
     </div>
