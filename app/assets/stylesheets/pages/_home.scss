@@ -3,17 +3,24 @@
 .mainBanner-title {
     color: #fff;
     margin: auto auto 22px;
-    max-width: 85%;
+    max-width: 100vh;
 }
 
+
+
 .mainBanner {
-    background-image: url("59537f4e49a12.jpeg");
+    background-image: url("https://amp.businessinsider.com/images/55a5132f69bedd2e3c09cb5c-750-562.jpg");
     background-position: center;
     background-size: cover;
     margin-bottom: 58px;
-    min-height: 400px;
     padding: 120px 0;
     text-align: center;
+    vertical-align: center;
+    height: 92vh;
+}
+
+.mainBanner h2{
+  font-size: 50px;
 }
 
 .h-title1 {
@@ -36,4 +43,58 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 100;
     line-height: 1.1;
     color: inherit;
+}
+
+.btn-explorer{
+  border-radius: 14px;
+  margin: 10px;
+  margin-left: 10px
+
+}
+
+.content-btn-explorer{
+  text-align: left;
+  margin: 20px;
+}
+
+.introSection {
+    margin-bottom: 95px;
+    padding: 0px 30px;
+    text-align: center;
+}
+
+
+
+#footer{
+  padding: 30px;
+  background: rgb(30, 30, 30);
+  color: lightgrey;
+}
+
+
+.card-home{
+  margin: 10px;
+  padding: 50px;
+  font-weight: lighter;
+  text-align: center;
+  background-color: lightgrey;
+  min-height: 200px;
+}
+
+ul{list-style: none;
+  display: flex;
+}
+
+li{margin: 12px}
+
+#footer{
+  background-color: lightgrey;
+}
+
+#footer a {
+  color: lightgrey;
+  font-size: 15px;
+}
+#footer a:hover {
+  color: white;
 }

@@ -14,7 +14,7 @@
             <h2><%= spot.description %></h2>
             <p><%= spot.city %></p>
           </div>
-          <h2 class="card-trip-pricing"><%= spot.price %></h2>
+          <h2 class="card-trip-pricing"><%= spot.price %> $/H</h2>
          <!--  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
           <%= cl_image_tag spot.user.avatar, class: "card-trip-user avatar-bordered"%>
         </div>
