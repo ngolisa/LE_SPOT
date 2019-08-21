@@ -9,7 +9,8 @@
 
 
 .mainBanner {
-    background-image: url("https://amp.businessinsider.com/images/55a5132f69bedd2e3c09cb5c-750-562.jpg");
+    background-image: url("
+https://bright-media.brightmls.com/bright/images/0000/3012/9367/9697/301293679697_2048_1536_WM_uZ9Cj8EwsseWXo2V.jpg");
     background-position: center;
     background-size: cover;
     margin-bottom: 58px;
@@ -21,6 +22,11 @@
 
 .mainBanner h2{
   font-size: 50px;
+}
+
+.mainBanner h3{
+  font-size: 50px;
+  color: white;
 }
 
 .h-title1 {
@@ -65,12 +71,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 
 
-#footer{
-  padding: 30px;
-  background: rgb(30, 30, 30);
-  color: lightgrey;
-}
-
 
 .card-home{
   margin: 10px;
@@ -79,22 +79,4 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   text-align: center;
   background-color: lightgrey;
   min-height: 200px;
-}
-
-ul{list-style: none;
-  display: flex;
-}
-
-li{margin: 12px}
-
-#footer{
-  background-color: lightgrey;
-}
-
-#footer a {
-  color: lightgrey;
-  font-size: 15px;
-}
-#footer a:hover {
-  color: white;
 }
