@@ -33,23 +33,23 @@ spot1.save
 
 spot2 = Spot.new(city:'London', user: arthur, address: "32 shoreditch high street", description: "Brilliant spot In London Baby", price: 200)
 url = "https://images.unsplash.com/photo-1495246592305-b1ba8ca2dd88?ixlib=rb-1.2.1&auto=format&fit=crop&w=1902&q=80"
-spot1.remote_photo_url = url
-spot1.save
+spot2.remote_photo_url = url
+spot2.save
 
 spot3 = Spot.new(city:'NYC', user: arthur, address: "Fifth avenue 230 new york", description: "Play like a NewYorker", price: 250)
 url = "https://images.unsplash.com/photo-1499510318569-1a3d67dc3976?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-spot1.remote_photo_url = url
-spot1.save
+spot3.remote_photo_url = url
+spot3.save
 
 spot4 = Spot.new(city:'Tokyo', user: arthur, address: "115-1113, Tokyo", description: "Tennis Session in Tokyo HyperCenter", price: 170)
 url = "https://images.unsplash.com/photo-1497901646207-7fb0902f8136?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1649&q=80"
-spot1.remote_photo_url = url
-spot1.save
+spot4.remote_photo_url = url
+spot4.save
 
 spot5 = Spot.new(city:'Sao Polo', user: arthur, address: "Rua Canuco SaoPaulo", description: "São Paulo Tennis Tour - Centro", price: 200)
 url = "https://images.unsplash.com/photo-1564525063120-1f209f91d3ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-spot1.remote_photo_url = url
-spot1.save
+spot5.remote_photo_url = url
+spot5.save
 
 reservation1 = Reservation.new(user: lisa, spot: spot1, date: "Thu, 22 Aug 2019 12:00:00 UTC +00:00")
 reservation1.save
