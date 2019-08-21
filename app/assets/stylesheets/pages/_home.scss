@@ -1,23 +1,19 @@
 // Specific CSS for your home-page //
-
-.mainBanner-title {
-    color: #fff;
-    margin: auto auto 22px;
-    max-width: 100vh;
+.content-for-nav-and-foot{
+  margin-top: 50px;
+  min-height: calc(100vh - 140px);
 }
 
 
-
 .mainBanner {
-    background-image: url("
-https://bright-media.brightmls.com/bright/images/0000/3012/9367/9697/301293679697_2048_1536_WM_uZ9Cj8EwsseWXo2V.jpg");
+    background-image: url("https://bright-media.brightmls.com/bright/images/0000/3012/9367/9697/301293679697_2048_1536_WM_uZ9Cj8EwsseWXo2V.jpg");
     background-position: center;
     background-size: cover;
     margin-bottom: 58px;
     padding: 120px 0;
     text-align: center;
     vertical-align: center;
-    height: 92vh;
+    height: calc(100vh - 10px);
 }
 
 .mainBanner h2{
@@ -69,14 +65,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     text-align: center;
 }
 
-
-
-
 .card-home{
   margin: 10px;
   padding: 50px;
   font-weight: lighter;
   text-align: center;
-  background-color: lightgrey;
+  background: lightgrey;
   min-height: 200px;
+}
+
+.container-cards {
+    margin: auto;
+}
+.row {
+  margin-left: -16px;
+  margin-right: -16px;
 }
