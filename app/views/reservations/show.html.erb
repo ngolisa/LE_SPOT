@@ -1,7 +1,8 @@
 <div class="container content-for-nav-and-foot">
 
-  <h1><%= @reservation.spot.description %></h1>
-  <h2>Date: <%= @reservation.date %></h2>
+  <h1><strong> <%= @reservation.spot.description %></strong></h1>
+  <h2>Date: <%= @reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
+  <h4>🕘 In : <%= distance_of_time_in_words(@reservation.date, DateTime.now) %></h4>
   <p>Owner : <%= cl_image_tag @reservation.spot.user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
   <%= cl_image_tag @reservation.spot.photo %>
 
