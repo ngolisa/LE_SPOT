@@ -1,11 +1,8 @@
 <div class="container content-for-nav-and-foot">
- <h1> All spots(<%= @spots.length %>)</h1>
+ <h1> All spots (<%= @spots.length %>)</h1>
  <div class="cards">
     <% @spots.each do |spot| %>
       <%= link_to spot_path(spot) do %>
-
-
-
 
       <div class="card-trip">
         <%= cl_image_tag spot.photo%>
@@ -26,7 +23,9 @@
     <div
       id="map"
       style="width: 100%;
-      height: 600px;"
+      height: 600px;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
