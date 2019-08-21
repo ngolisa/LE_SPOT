@@ -3,6 +3,7 @@
      <div>
      <h1> <%= @spot.description %> </h1>
      <p> <%= @spot.address %> - <%= @spot.city %> </p>
+     <p>Owner : <%= cl_image_tag @spot.user.avatar, class: "avatar dropdown-toggle" %></p>
 
     </div>
     <div class="show-buttons">
@@ -18,7 +19,7 @@
   </div>
 
     <div class="card-trip1">
-      # <span class="img"> <%= cl_image_tag(@spot.photo, class: "d-block w-100") %> </span>
+       <span class="img"> <%= cl_image_tag(@spot.photo, class: "d-block w-100") %> </span>
     </div>
 
 

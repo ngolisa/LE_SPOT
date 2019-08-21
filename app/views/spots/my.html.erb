@@ -1,7 +1,7 @@
 <div class="container content-for-nav-and-foot">
-  <h1>My spots (<%= @spots.length %>)</h1>
+  <h1>My spots (<%= @myspots.length %>)</h1>
 
-    <% @spots.each do |spot| %>
+    <% @myspots.each do |spot| %>
       <%= link_to spot_path(spot) do %>
         <div class="card-product">
 
