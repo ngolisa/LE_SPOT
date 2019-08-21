@@ -5,7 +5,7 @@
   <p>Owner : <%= cl_image_tag @reservation.spot.user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
   <%= cl_image_tag @reservation.spot.photo %>
 
-  <button type="button" class="btn btn-info"> <%= link_to "Delete", reservation_path(@reservation),
+  <button type="button" class="btn btn-info"> <%= link_to "Cancel", reservation_path(@reservation),
   method: :delete,
   data: { confirm: "Are you sure?" } %> </button>
 
