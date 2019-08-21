@@ -32,3 +32,5 @@ spot1.save
 
 reservation1 = Reservation.new(user: lisa, spot: spot1, date: "Thu, 22 Aug 2019 12:00:00 UTC +00:00")
 reservation1.save
+reservation2 = Reservation.new(user: lisa, spot: spot1, date: "Fr, 23 Aug 2019 12:00:00 UTC +00:00")
+reservation2.save
