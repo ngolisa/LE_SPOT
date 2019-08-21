@@ -7,10 +7,8 @@
 }
 
 
-
 .mainBanner {
-    background-image: url("
-https://bright-media.brightmls.com/bright/images/0000/3012/9367/9697/301293679697_2048_1536_WM_uZ9Cj8EwsseWXo2V.jpg");
+    background-image: url("https://bright-media.brightmls.com/bright/images/0000/3012/9367/9697/301293679697_2048_1536_WM_uZ9Cj8EwsseWXo2V.jpg");
     background-position: center;
     background-size: cover;
     margin-bottom: 58px;
@@ -69,14 +67,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     text-align: center;
 }
 
-
-
-
 .card-home{
   margin: 10px;
   padding: 50px;
   font-weight: lighter;
   text-align: center;
-  background-color: lightgrey;
+  background: lightgrey;
   min-height: 200px;
+}
+
+.container-cards {
+    margin: auto;
+}
+.row {
+  margin-left: -16px;
+  margin-right: -16px;
 }
