@@ -27,7 +27,7 @@
   <% if current_user != @spot.user %>
     <div>
       <%= simple_form_for @reservation do |f| %>
-        <%= f.input :date, as: :string, required: false, input_html: {  class: "datepicker"} %>
+        <%= f.input :date, as: :hidden,required: false, input_html: {  class: "datepicker"} %>
         <%= f.input :spot_id, as: :hidden, input_html: { value: @spot.id }   %>
         <%= f.submit %>
      <% end %>
@@ -44,4 +44,27 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
+  <div>
+
+    <% if @spot.user == current_user %>
+      <h2>Reservations: </h2>
+      <% @spot.reservations.each do |reservation|%>
+        <%= link_to reservation_path(reservation)  do%>
+          <div class="card-product">
+
+            <%= cl_image_tag reservation.spot.photo, class: "card-product-infos"%>
+              <div class="card-product-infos">
+              <h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4>
+
+              <h2><%=  reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
+              <p><%= cl_image_tag reservation.user.avatar, class: "avatar" %> </p>
+
+              </div>
+          </div>
+
+        <% end %>
+      <% end %>
+    <% end %>
+
+  </div>
 </div>

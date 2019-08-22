@@ -8,6 +8,11 @@
           <%= cl_image_tag spot.photo, class: "card-product-infos"%>
             <div class="card-product-infos">
               <h2><%=  spot.description %></h2>
+              <p>
+                Number of reservations :
+                <% l = spot.reservations.select { |r| r.date > DateTime.now }  %>
+                <%= l.length %>
+              </p>
 
             </div>
         </div>
