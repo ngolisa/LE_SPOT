@@ -45,8 +45,9 @@
   </div>
 
   <div>
-    <h2>Reservations: </h2>
+
     <% if @spot.user == current_user %>
+      <h2>Reservations: </h2>
       <% @spot.reservations.each do |reservation|%>
         <%= link_to reservation_path(reservation)  do%>
           <div class="card-product">
@@ -56,7 +57,7 @@
               <h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4>
 
               <h2><%=  reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
-              <p><%= cl_image_tag reservation.user.avatar, class: "card-trip-user avatar-bordered" %> </p>
+              <p><%= cl_image_tag reservation.user.avatar, class: "avatar" %> </p>
 
               </div>
           </div>
