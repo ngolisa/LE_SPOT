@@ -10,6 +10,18 @@
 
 }
 
+.wrapper2 {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+
+.reservation2 {
+  margin-left: 20px;
+  margin-top: -3px;
+  width: 100px;;
+}
+
 .show-buttons {
   display: flex;
   flex-direction: column;
@@ -48,14 +60,12 @@ text-decoration: none;
 }
 
 
-
-
 .card-trip1 {
   height: 400px;
+  width: 70%;
+  margin-right: 10px;
   background-size: cover;
   background-position: center;
-  margin-top: 15px;
-  margin-bottom: 25px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
