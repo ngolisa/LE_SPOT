@@ -1,7 +1,12 @@
 class SpotsController < ApplicationController
   def index
-    @spots = Spot.all
-    @spots = Spot.geocoded
+    if params[:query].present?
+      @spots = Spot.search_by_city_and_date(params[:query])
+    else
+      @spots = Spot.all
+    end
+
+    @spots = @spots.geocoded
     @markers = @spots.map do |spot|
       {
         lat: spot.latitude,
@@ -13,6 +18,12 @@ class SpotsController < ApplicationController
   def show
     @spot = Spot.find(params[:id])
     @reservation = Reservation.new
+
+    @markers = [{
+      lat: @spot.latitude,
+      lng: @spot.longitude
+    }]
+
   end
 
   def new
