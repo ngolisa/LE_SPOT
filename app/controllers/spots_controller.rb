@@ -12,7 +12,7 @@ class SpotsController < ApplicationController
         lat: spot.latitude,
         lng: spot.longitude,
         infoWindow: render_to_string(partial: "infowindow", locals: { spot: spot }),
-        image_url: helpers.asset_url('kisspng-tennis-balls-logo-5b1f5f29e9c310.0679543415287826339575.png')
+        image_url: helpers.asset_url('8270.png')
       }
     end
   end
@@ -23,7 +23,9 @@ class SpotsController < ApplicationController
 
     @markers = [{
       lat: @spot.latitude,
-      lng: @spot.longitude
+      lng: @spot.longitude,
+      infoWindow: render_to_string(partial: "infowindow", locals: { spot: @spot }),
+      image_url: helpers.asset_url('8270.png')
     }]
   end
 
