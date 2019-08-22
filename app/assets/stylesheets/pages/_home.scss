@@ -1,7 +1,8 @@
 // Specific CSS for your home-page //
 .content-for-nav-and-foot{
-  margin-top: 50px;
+  margin-top: 60px;
   min-height: calc(100vh - 140px);
+  padding: 10px;
 }
 
 
@@ -18,7 +19,7 @@
 
 #myVideo {
   z-index: -10;
-  position: fixed;
+  position: absolute;
   right: 0;
   bottom: 0;
   width: 100%;

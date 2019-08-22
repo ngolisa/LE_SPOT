@@ -1,28 +1,38 @@
 <div class="container content-for-nav-and-foot">
-  <h1>My spots (<%= @myspots.length %>)</h1>
 
-    <% @myspots.each do |spot| %>
-      <%= link_to spot_path(spot) do %>
-        <div class="card-product">
 
-          <%= cl_image_tag spot.photo, class: "card-product-infos"%>
-            <div class="card-product-infos">
-              <h2><%=  spot.description %></h2>
-              <p>
-                Number of reservations :
-                <% l = spot.reservations.select { |r| r.date > DateTime.now }  %>
-                <%= l.length %>
-              </p>
 
-            </div>
-        </div>
+
+  <% if @myspots.length > 0 %>
+    <h1>My spots (<%= @myspots.length %>)</h1>
+
+      <% @myspots.each do |spot| %>
+        <%= link_to spot_path(spot) do %>
+          <div class="card-product">
+
+            <%= cl_image_tag spot.photo, class: "card-product-infos"%>
+              <div class="card-product-infos">
+                <h2><%=  spot.description %></h2>
+                  <p>
+                    Reservation to confirm:
+                    <ul>
+                    <% spot.reservations.select(:status == 'pending').each do |reservation| %>
+                        <li><%= link_to reservation.date, reservation_path(reservation) %></li>
+                    <% end %>
+                    </ul>
+                  </p>
+              </div>
+          </div>
+
+
+        <% end %>
 
 
       <% end %>
-
+    <% else %>
+      <h1>Sorry, you don't have any spot</h1>
+      <%= link_to "Add a spot", new_spot_path %>
 
     <% end %>
-
-
 
 </div>

@@ -1,27 +1,34 @@
 <div class="container content-for-nav-and-foot">
-  <h1>My reservations (<%= @reservations.length %>)</h1>
+  <% if @reservations.length > 0 %>
+    <h1>My reservations (<%= @reservations.length %>)</h1>
 
-  <% @reservations.each do |reservation| %>
-  <div>
-
-
-      <%= link_to reservation_path(reservation)  do%>
-        <div class="card-product">
-
-          <%= cl_image_tag reservation.spot.photo, class: "card-product-infos"%>
-            <div class="card-product-infos">
-            <h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4>
-
-            <h2><%=  reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
-
-            </div>
-        </div>
+    <% @reservations.each do |reservation| %>
+      <div>
 
 
+        <%= link_to reservation_path(reservation)  do%>
+          <div class="card-product">
+
+            <%= cl_image_tag reservation.spot.photo, class: "card-product-infos"%>
+              <div class="card-product-infos">
+              <h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4>
+
+              <h2><%=  reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
+              <p><%= reservation.status %></p>
+
+              </div>
+          </div>
+
+
+        <% end %>
+      </div>
     <% end %>
-  </div>
-    <% end %>
+  <% else %>
+    <h2> Sorry you don't have any reservations to come</h2>
+    <%= link_to "Find a spot", spots_path %>
+  <% end %>
 
+  <% if @oldreservations.length > 0 %>
     <h1>Old reservations (<%= @oldreservations.length %>)</h1>
     <% @oldreservations.each do |reservation| %>
     <div>
@@ -43,6 +50,8 @@
       <% end %>
     </div>
     <% end %>
+
+  <% end %>
 
 
 
