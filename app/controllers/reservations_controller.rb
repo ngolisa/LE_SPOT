@@ -1,6 +1,8 @@
 class ReservationsController < ApplicationController
   def index
-    @reservations = Reservation.where(user: current_user)
+    # @reservations = Reservation.where(user: current_user and distance_of_time_in_words(:date, DateTime.now) > 0
+    @reservations = current_user.reservations.select { |r| r.date > DateTime.now }
+    @oldreservations = current_user.reservations.select { |r| r.date <= DateTime.now }
   end
 
   def create
@@ -9,6 +11,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to reservation_path(@reservation.id)
     else
+      flash.alert = "Spot not available"
       redirect_to spot_path(@reservation.spot)
     end
   end
