@@ -6,14 +6,23 @@
 
 
 .mainBanner {
-    background-image: url("https://images.unsplash.com/photo-1564525063120-1f209f91d3ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 58px;
-    padding: 120px 0;
-    text-align: center;
-    vertical-align: center;
-    height: calc(100vh - 10px);
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 58px;
+  padding: 120px 0;
+  text-align: center;
+  vertical-align: center;
+  height: calc(100vh);
+}
+
+
+#myVideo {
+  z-index: -10;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .mainBanner h2{
@@ -60,10 +69,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   text-align: center;
 }
 
+.second{
+  margin-top:100vh;
+  background-color: red;
+}
+
 .introSection {
-    margin-bottom: 95px;
-    padding: 0px 30px;
-    text-align: center;
+/*  background-color: white;*/
+  margin-bottom: 95px;
+  padding: 0px 30px;
+  text-align: center;
 }
 
 .card-home{
