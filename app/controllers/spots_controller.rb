@@ -25,7 +25,6 @@ class SpotsController < ApplicationController
       lat: @spot.latitude,
       lng: @spot.longitude
     }]
-
   end
 
   def new
