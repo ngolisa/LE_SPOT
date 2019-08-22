@@ -4,8 +4,9 @@
     <% @spots.each do |spot| %>
       <%= link_to spot_path(spot) do %>
 
+
       <div class="card-trip">
-        <%= cl_image_tag spot.photo%>
+       <%= cl_image_tag spot.photo%>
         <div class="card-trip-infos">
           <div>
             <h2><%= spot.description %></h2>
