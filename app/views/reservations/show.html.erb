@@ -1,6 +1,6 @@
 <div class="container content-for-nav-and-foot">
 
-  <h1><strong> <%= @reservation.spot.description %></strong></h1>
+  <h1><strong> Confirmed: <%= @reservation.spot.description %></strong></h1>
   <h2>Date: <%= @reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
   <h4>🕘 In : <%= distance_of_time_in_words(@reservation.date, DateTime.now) %></h4>
   <br>
