@@ -1,7 +1,6 @@
 <div class="container content-for-nav-and-foot">
 
     <!-- The video -->
-
   <div class="mainBanner">
     <div>
       <video autoplay muted loop id="myVideo">
@@ -14,32 +13,20 @@
 
 <!-- <div class="container-form"> -->
     <form>
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-xs-12 col-md-2">
-          <input type="text" class="form-control" placeholder="City">
-        </div>
-        <div class="col-xs-12 col-md-2">
-          <input type="date" class='datepicker form-control' placeholder='<%= Date.today.strftime('%m/%d/%Y') %>'>
-        </div>
-        <!-- <div class="col-xs-12 col-md-2 look-button"> -->
-        <button type="button" class="btn btn-warning col-xs-12 col-md-2 search-btn">🔎 Rechercher</button>
-        <!-- </div> -->
-        <div class="col-md-3"></div>
+      <%= form_tag spots_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a spot"
+  %>
+  <%= submit_tag "🔎 Rechercher", class: "btn btn-primary" %>
+  <% end %>
 
-      </div>
       <div class = "content-btn-explorer">
         <%= link_to "Explore all spots 🌎",  spots_path, :class => "btn btn-light btn-lg btn-explorer" %>
       </div>
-     </div>
     </form>
   </div>
-    <!-- </div> -->
-
-    <!-- Search form -->
-
-  </div>
-
 
   <div class="introSection">
     <h2 class="h-title2 introSection-title"> <strong>✨ When Experience meets Tennis ✨</strong> </h2>
