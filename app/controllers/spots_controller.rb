@@ -10,7 +10,9 @@ class SpotsController < ApplicationController
     @markers = @spots.map do |spot|
       {
         lat: spot.latitude,
-        lng: spot.longitude
+        lng: spot.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { spot: spot }),
+        image_url: helpers.asset_url('kisspng-tennis-balls-logo-5b1f5f29e9c310.0679543415287826339575.png')
       }
     end
   end
