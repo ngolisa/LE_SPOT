@@ -61,7 +61,6 @@ class SpotsController < ApplicationController
   end
 
   def my
-    # @myspots = Spot.where(current_user == :user_id)
     @myspots = Spot.where(user: current_user)
   end
 

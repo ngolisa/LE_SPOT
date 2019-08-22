@@ -46,7 +46,7 @@
 
   <div>
 
-    <% if @spot.user == current_user %>
+    <% if @spot.user == current_user && @spot.reservations.length > 0 %>
       <h2>Reservations: </h2>
       <% @spot.reservations.each do |reservation|%>
         <%= link_to reservation_path(reservation)  do%>
