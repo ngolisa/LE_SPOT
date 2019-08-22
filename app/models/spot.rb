@@ -6,5 +6,6 @@ class Spot < ApplicationRecord
   validates :price, presence: true
   mount_uploader :photo, PhotoUploader
   geocoded_by :address
+  has_many :reservations
   after_validation :geocode, if: :will_save_change_to_address?
 end
