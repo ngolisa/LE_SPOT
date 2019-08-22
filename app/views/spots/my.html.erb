@@ -13,14 +13,19 @@
             <%= cl_image_tag spot.photo, class: "card-product-infos"%>
               <div class="card-product-infos">
                 <h2><%=  spot.description %></h2>
+                <% if spot.reservations.where(status: "pending").any? %>
                   <p>
                     Reservation to confirm:
                     <ul>
-                    <% spot.reservations.select(:status == 'pending').each do |reservation| %>
-                        <li><%= link_to reservation.date, reservation_path(reservation) %></li>
+                    <% spot.reservations.where(status: "pending").each do |reservation| %>
+                        <li><%= link_to reservation.date.strftime('%A %e %B, at %l:%M'), reservation_path(reservation) %>
+                          <%= link_to "Confirm this reservation", changestatus_reservation_path(reservation, :status => 'accepted'), method: :POST %>
+                          <%= link_to "Refuse this reservation", changestatus_reservation_path(reservation, :status => 'denied'), method: :POST %>
+                        </li>
                     <% end %>
                     </ul>
                   </p>
+                  <% end %>
               </div>
           </div>
 
