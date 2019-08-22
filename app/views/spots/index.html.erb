@@ -1,4 +1,14 @@
 <div class="container content-for-nav-and-foot">
+
+  <%= form_tag spots_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a spot"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
  <h1> All spots (<%= @spots.length %>)</h1>
  <div class="cards">
     <% @spots.each do |spot| %>
