@@ -8,5 +8,9 @@ Rails.application.routes.draw do
 
 
 
-  resources :reservations, only: [:create, :index, :show, :destroy]
+  resources :reservations, only: [:create, :index, :show, :destroy]  do
+    member do
+      post 'changestatus'
+    end
+  end
 end
