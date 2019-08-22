@@ -1,4 +1,6 @@
-<div class="container content-for-nav-and-foot">
+<div  class="banner-reserve">
+<div class="container content-for-nav-and-foot" >
+
   <h1>My reservations (<%= @reservations.length %>)</h1>
 
   <% @reservations.each do |reservation| %>
@@ -8,7 +10,7 @@
       <%= link_to reservation_path(reservation)  do%>
         <div class="card-product">
 
-          <%= cl_image_tag reservation.spot.photo, class: "card-product-infos"%>
+          <%= cl_image_tag reservation.spot.photo, class: "card-product-infoss"%>
             <div class="card-product-infos">
             <h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4>
 
@@ -43,7 +45,5 @@
       <% end %>
     </div>
     <% end %>
-
-
-
+</div>
 </div>
