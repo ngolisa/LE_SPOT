@@ -12,7 +12,6 @@
       <br>
 
 <!-- <div class="container-form"> -->
-    <form>
       <%= form_tag spots_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
@@ -25,7 +24,6 @@
       <div class = "content-btn-explorer">
         <%= link_to "Explore all spots 🌎",  spots_path, :class => "btn btn-light btn-lg btn-explorer" %>
       </div>
-    </form>
   </div>
 
   <div class="introSection">

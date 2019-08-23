@@ -5,7 +5,6 @@ class SpotsController < ApplicationController
     else
       @spots = Spot.all
     end
-
     @spots = @spots.geocoded
     @markers = @spots.map do |spot|
       {
