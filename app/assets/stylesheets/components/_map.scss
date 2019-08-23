@@ -3,9 +3,26 @@
   max-width: 200px;
 }
 
+.tet {
+  width: 100%;
+
+}
+
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+
+  p {
+
+    a{
+    text-decoration: none;
+    color:black;
+    font-size: bold;
+    }
+    a:hover {
+      color:red;
+    }
+  }
 }
 
 #map {

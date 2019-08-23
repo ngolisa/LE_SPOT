@@ -1,1 +1,8 @@
-<h2><%= spot.description %></h2>
+
+
+ <p> <%= link_to spot.description, spot_path(spot) %> </p>
+
+  <div class="tet">
+  <%= cl_image_tag spot.photo, width:'150px', height:'150px' %>
+  </div
+
