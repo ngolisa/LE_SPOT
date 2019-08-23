@@ -6,7 +6,7 @@
       <div>
 
 
-        <%= link_to reservation_path(reservation)  do%>
+        <%= link_to reservation_path(reservation), class: 'card-link' do%>
           <div class="card-product">
 
             <%= cl_image_tag reservation.spot.photo, class: "card-product-infos"%>
