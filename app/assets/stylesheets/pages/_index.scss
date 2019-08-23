@@ -2,11 +2,23 @@
 @import "home";
 @import "show";
 
+.position {
+  display: flex;
+}
+
+.wrapper {
+  margin-top: 60px;
+  width: 1330px;
+  margin-left: 58px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  flex: 1 1 60%;
+  padding-right: 10px;
 }
 
 // Smallest device

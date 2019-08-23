@@ -1,13 +1,24 @@
 <div class="container content-for-nav-and-foot">
+  <% if current_user == @reservation.spot.user %>
+    <%= link_to "Go back to my spots", myspots_path %>
+  <% end %>
+  <% if current_user == @reservation.spot.user && @reservation.status == 'pending' %>
+    <%= link_to "Confirm this reservation", changestatus_reservation_path(@reservation, :status => 'accepted'), method: :POST %>
+    <%= link_to "Refuse this reservation", changestatus_reservation_path(@reservation, :status => 'denied'), method: :POST %>
+  <% end %>
 
-  <h1><strong> Confirmed: <%= @reservation.spot.description %></strong></h1>
+  <h1><strong> <%= @reservation.status %>: <%= @reservation.spot.description %></strong></h1>
   <h2>Date: <%= @reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
   <h4>🕘 In : <%= distance_of_time_in_words(@reservation.date, DateTime.now) %></h4>
   <br>
   <p>Owner : <%= cl_image_tag @reservation.spot.user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></p>
-  <button type="button" class="btn"> <%= link_to "Cancel", reservation_path(@reservation),
-  method: :delete,
-  data: { confirm: "Are you sure?" } %> </button>
+
+  <% if current_user == @reservation.user %>
+    <button type="button" class="btn"> <%= link_to "Cancel", reservation_path(@reservation),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %> </button>
+  <% end %>
+
   <br>
   <div class = "photo-reservation">
   <%= cl_image_tag @reservation.spot.photo %>

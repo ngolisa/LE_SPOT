@@ -1,36 +1,32 @@
-<div class="container content-for-nav-and-foot">
-
-  <%= form_tag spots_path, method: :get do %>
+<div class="wrapper pt-4">
+    <%= form_tag spots_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Find a spot"
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
+  <% end %>
  <h1> All spots (<%= @spots.length %>)</h1>
- <div class="cards">
-    <% @spots.each do |spot| %>
-      <%= link_to spot_path(spot) do %>
-
-
-      <div class="card-trip">
-       <%= cl_image_tag spot.photo%>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= spot.description %></h2>
-            <p><%= spot.city %></p>
+  <div class="position">
+    <div class="cards">
+      <% @spots.each do |spot| %>
+        <%= link_to spot_path(spot) do %>
+        <div class="card-trip">
+         <%= cl_image_tag spot.photo%>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= spot.description %></h2>
+              <p><%= spot.city %></p>
+            </div>
+            <h2 class="card-trip-pricing"><%= spot.price %> $/H</h2>
+           <!--  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
+            <%= cl_image_tag spot.user.avatar, class: "card-trip-user avatar-bordered"%>
           </div>
-          <h2 class="card-trip-pricing"><%= spot.price %> $/H</h2>
-         <!--  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
-          <%= cl_image_tag spot.user.avatar, class: "card-trip-user avatar-bordered"%>
         </div>
-      </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-
+    </div>
     <div
       id="map"
       style="width: 100%;
@@ -40,7 +36,7 @@
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
-
+  </div>
 </div>
 
 

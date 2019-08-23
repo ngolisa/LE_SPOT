@@ -7,7 +7,7 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10'
+      style: 'mapbox://styles/blochec1/cjzmonu5m00la1cmjgy9v7qmy'
     });
 
     const markers = JSON.parse(mapElement.dataset.markers);
