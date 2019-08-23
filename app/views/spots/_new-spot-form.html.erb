@@ -1,8 +1,11 @@
-<%= simple_form_for @spot do |f| %>
-  <%= f.input :description %>
-  <%= f.input :city %>
-  <%= f.input :address %>
-  <%= f.input :price %>
-  <%= f.input :photo %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
-<% end %>
+
+<div class="container-form-new-spot">
+  <%= simple_form_for @spot do |f| %>
+    <%= f.input :description %>
+    <%= f.input :city %>
+    <%= f.input :address %>
+    <%= f.input :price %>
+    <%= f.input :photo %>
+    <%= f.button :submit, class: 'btn btn-light' %>
+  <% end %>
+</div>
