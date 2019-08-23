@@ -33,7 +33,7 @@
       <% end %>
     </div>
 
-
+<% if @spot.user != current_user %>
 <div
         id="map"
         style="width: 100%;
@@ -43,6 +43,7 @@
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
+<% end %>
 
 
   <div>
@@ -53,12 +54,11 @@
         <%= link_to reservation_path(reservation)  do%>
           <div class="card-product">
 
-            <%= cl_image_tag reservation.spot.photo, class: "card-product-infos"%>
+            <%= cl_image_tag reservation.user.avatar, class: "card-product-infos"%>
               <div class="card-product-infos">
-              <h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4>
+              <!-- h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4> -->
 
               <h2><%=  reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
-              <p><%= cl_image_tag reservation.user.avatar, class: "avatar" %> </p>
 
               </div>
           </div>
