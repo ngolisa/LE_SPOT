@@ -19,8 +19,13 @@
                     <ul>
                     <% spot.reservations.where(status: "pending").each do |reservation| %>
                         <li><%= link_to reservation.date.strftime('%A %e %B, at %l:%M'), reservation_path(reservation) %>
-                          <%= link_to "Confirm this reservation", changestatus_reservation_path(reservation, :status => 'accepted'), method: :POST %>
-                          <%= link_to "Refuse this reservation", changestatus_reservation_path(reservation, :status => 'denied'), method: :POST %>
+                          <button type="button" class="btn btn-ghost">
+                            <%= link_to "Confirm", changestatus_reservation_path(reservation, :status => 'accepted'), method: :POST%>
+                          </button>
+                          <button type="button" class="btn btn-ghost">
+                            <%= link_to "Refuse", changestatus_reservation_path(reservation, :status => 'denied'), method: :POST %>
+                          </button>
+
                         </li>
                     <% end %>
                     </ul>

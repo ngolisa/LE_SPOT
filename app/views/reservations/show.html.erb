@@ -1,10 +1,19 @@
 <div class="container content-for-nav-and-foot">
   <% if current_user == @reservation.spot.user %>
     <%= link_to "Go back to my spots", myspots_path %>
+
   <% end %>
   <% if current_user == @reservation.spot.user && @reservation.status == 'pending' %>
-    <%= link_to "Confirm this reservation", changestatus_reservation_path(@reservation, :status => 'accepted'), method: :POST %>
-    <%= link_to "Refuse this reservation", changestatus_reservation_path(@reservation, :status => 'denied'), method: :POST %>
+
+
+  <button type="button" class="btn btn-ghost">
+    <%= link_to "Confirm", changestatus_reservation_path(@reservation, :status => 'accepted'), method: :POST%>
+  </button>
+
+
+  <button type="button" class="btn btn-ghost">
+    <%= link_to "Refuse", changestatus_reservation_path(@reservation, :status => 'denied'), method: :POST %>
+  </button>
   <% end %>
 
   <h1><strong> <%= @reservation.status %>: <%= @reservation.spot.description %></strong></h1>
