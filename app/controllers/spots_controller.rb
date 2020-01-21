@@ -41,6 +41,9 @@ class SpotsController < ApplicationController
       render 'new'
     end
   end
+  def edit
+    @spot = Spot.find(params[:id])
+  end
 
   def update
     @spot = Spot.find(params[:id])
@@ -51,9 +54,6 @@ class SpotsController < ApplicationController
     end
   end
 
-  def edit
-    @spot = Spot.find(params[:id])
-  end
 
   def destroy
     @spot = Spot.find(params[:id])

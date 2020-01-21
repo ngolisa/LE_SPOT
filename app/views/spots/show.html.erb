@@ -5,67 +5,67 @@
      <p> <%= @spot.address %> - <%= @spot.city %> </p>
      <p>Owner : <%= cl_image_tag @spot.user.avatar, class: "avatar dropdown-toggle" %></p>
 
-    </div>
-    <div class="show-buttons">
-      <% if current_user == @spot.user %>
-        <%= link_to "Edit", edit_spot_path(@spot), class: "btn btn-ghost" %>
+   </div>
+   <div class="show-buttons">
+    <% if current_user == @spot.user %>
+    <%= link_to "Edit", edit_spot_path(@spot), class: "btn btn-ghost" %>
 
-        <%= link_to "Delete", spot_path(@spot),
-        method: :delete,
-        data: { confirm: "Are you sure?" }, class:"btn-del" %>
+    <%= link_to "Delete", spot_path(@spot),
+    method: :delete,
+    data: { confirm: "Are you sure?" }, class:"btn-del" %>
 
-      <% end %>
-    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="wrapper2">
+  <div class="card-trip1" style="background-image: url('<%= cl_image_path(@spot.photo) %>');">
   </div>
 
-    <div class="wrapper2">
-        <div class="card-trip1" style="background-image: url('<%= cl_image_path(@spot.photo) %>');">
-        </div>
-
-        <div class="reservation2">
-          <% if current_user != @spot.user %>
-          <%= simple_form_for @reservation do |f| %>
-            <%= f.input :date, as: :hidden,required: false, input_html: {  class: "datepicker"} %>
-            <%= f.input :spot_id, as: :hidden, input_html: { value: @spot.id }   %>
-            <%= f.submit %>
-         <% end %>
-        </div>
-      <% end %>
-    </div>
+  <div class="reservation2">
+    <% if current_user != @spot.user %>
+    <%= simple_form_for @reservation do |f| %>
+    <%= f.input :date, as: :hidden,required: false, input_html: {  class: "datepicker"} %>
+    <%= f.input :spot_id, as: :hidden, input_html: { value: @spot.id }   %>
+    <%= f.submit %>
+    <% end %>
+  </div>
+  <% end %>
+</div>
 
 <% if @spot.user != current_user %>
 <div
-        id="map"
-        style="width: 100%;
-        height: 400px;
-        border-radius: 5px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
+id="map"
+style="width: 100%;
+height: 400px;
+border-radius: 5px;
+box-shadow: 0 0 15px rgba(0,0,0,0.2);"
+data-markers="<%= @markers.to_json %>"
+data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 <% end %>
 
 
-  <div>
+<div>
 
-    <% if @spot.user == current_user && @spot.reservations.length > 0 %>
-      <h2>Reservations: </h2>
-      <% @spot.reservations.each do |reservation|%>
-        <%= link_to reservation_path(reservation)  do%>
-          <div class="card-product">
+  <% if @spot.user == current_user && @spot.reservations.length > 0 %>
+  <h2>Reservations: </h2>
+  <% @spot.reservations.each do |reservation|%>
+  <%= link_to reservation_path(reservation)  do%>
+  <div class="card-product">
 
-            <%= cl_image_tag reservation.user.avatar, class: "card-product-infos"%>
-              <div class="card-product-infos">
-              <!-- h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4> -->
+    <%= cl_image_tag reservation.user.avatar, class: "card-product-infos"%>
+    <div class="card-product-infos">
+      <!-- h4> <%= reservation.spot.description %> (<%= reservation.spot.city %>)</h4> -->
 
-              <h2><%=  reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
+      <h2><%=  reservation.date.strftime('%A %e %B, at %l:%M') %></h2>
 
-              </div>
-          </div>
-
-        <% end %>
-      <% end %>
-    <% end %>
-
+    </div>
   </div>
+
+  <% end %>
+  <% end %>
+  <% end %>
+
+</div>
 </div>

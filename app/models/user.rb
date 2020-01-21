@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :spots, dependent: :destroy
   has_many :reservations, dependent: :destroy
   mount_uploader :avatar, PhotoUploader
-  validates :avatar, presence: true
+  # validates :avatar, presence: true
 end
